@@ -95,10 +95,10 @@ def check(text):
 
     for word in words:
         check_result = CheckResult.PASSED
-        if word[:5] == '<red>':
-            check_result = CheckResult.WRONG_SPELLING
-            word = word.replace('<red>', '')
-        elif word[:7] == '<green>':
+        # if word[:5] == '<red>':
+        #     check_result = CheckResult.WRONG_SPELLING
+        #     word = word.replace('<red>', '')
+        if word[:7] == '<green>':
             check_result = CheckResult.WRONG_SPACING
             word = word.replace('<green>', '')
         elif word[:8] == '<violet>':
